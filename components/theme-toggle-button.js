@@ -6,7 +6,7 @@ const ToggleThemeButton = () => {
   const { toggleColorMode } = useColorMode()
 
   return (
-    <AnimatePresence initial={false}>
+    <AnimatePresence exitBeforeEnter initial={false}>
       <motion.div
         style={{ display: 'inline-block' }}
         key={useColorModeValue('light', 'dark')}
