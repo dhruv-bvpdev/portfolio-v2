@@ -6,13 +6,17 @@ import {
   Image,
   useColorModeValue,
   Link,
-  Button
+  Button,
+  List,
+  ListItem
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
+import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5'
+import { FaTelegramPlane } from 'react-icons/fa'
 
 const Page = () => {
   return (
@@ -103,6 +107,47 @@ const Page = () => {
           <Paragraph>
             Travelling, Hip-Hop Music, Binge Watching Netflix
           </Paragraph>
+        </Section>
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/dhruv-bvpdev" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoGithub />}
+                >
+                  @dhruv-bvpdev
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://twitter.com/dhruv_gursahani" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoTwitter />}
+                >
+                  @dhruv_gursahani
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://t.me/dhruv_G" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<FaTelegramPlane />}
+                >
+                  @dhruv_G
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
         </Section>
       </Container>
     </Layout>
