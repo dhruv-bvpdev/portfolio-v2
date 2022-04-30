@@ -8,6 +8,7 @@ export default class Document extends NextDocument {
       <Html lang="en">
         <Head />
         <body>
+          <p hidden>The design was inspired by Takuya Matsuyama</p>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
