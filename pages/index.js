@@ -32,6 +32,7 @@ const Page = () => {
         <Box
           borderRadius="lg"
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          css={{ backdropFilter: 'blur(10px)' }}
           p={3}
           mb={6}
           align="center"
@@ -76,7 +77,7 @@ const Page = () => {
             and Frameworks like React.js and Next.js.
           </Paragraph>
           <Box align="center" my={4}>
-            <NextLink href="/works">
+            <NextLink href="/works" passHref scroll={false}>
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 My Portfolio
               </Button>
