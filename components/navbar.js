@@ -17,8 +17,6 @@ import {
 import ToggleThemeButton from './theme-toggle-button'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { IoLogoGithub } from 'react-icons/io'
-import { BsSpotify } from 'react-icons/bs'
-import useSWR from 'swr'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -40,8 +38,6 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
 }
 
 const Navbar = props => {
-  const fetcher = url => fetch(url).then(r => r.json())
-  const { data } = useSWR('/api/spotify', fetcher)
   const { path } = props
 
   return (

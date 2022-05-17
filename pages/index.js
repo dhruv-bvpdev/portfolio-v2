@@ -98,12 +98,12 @@ const Page = () => {
           </BioSection>
           <BioSection>
             <BioYear>2022</BioYear>
-            Completed Bachelor's Program in Computer Application at Bharati
+            Completed Bachelor&apos;s Program in Computer Application at Bharati
             Vidyapeeth Institute of Management and Research
           </BioSection>
           <BioSection>
             <BioYear>2022</BioYear>
-            Still Figuring out what's next.....
+            Still Figuring out what&apos;s next.....
           </BioSection>
         </Section>
 

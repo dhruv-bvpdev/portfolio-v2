@@ -1,4 +1,4 @@
-import { Container, Box, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Section from '../components/section'
 import Layout from '../components/layouts/article'
 import { WorkGridItem } from '../components/grid-item'
@@ -59,10 +59,11 @@ const Works = () => {
               title="Amazon 2.0"
               thumbnail={thumbnailAmazon}
             >
-              Clone of famous E-Commerce shopping Platform 'Amazon' built using
-              Next.js, TailwindCSS. It fetches the product data from FakeStore
-              API (a free to use demo product REST API). The checkout process is
-              handled by Stripe through Next's serverless functions
+              Clone of famous E-Commerce shopping Platform &apos;Amazon&apos;
+              built using Next.js, TailwindCSS. It fetches the product data from
+              FakeStore API (a free to use demo product REST API). The checkout
+              process is handled by Stripe through Next&apos;s serverless
+              functions
             </WorkGridItem>
           </Section>
 

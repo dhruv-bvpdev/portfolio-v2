@@ -12,10 +12,10 @@ const Work = () => {
           Amazon 2.0 <Badge>2022</Badge>
         </Title>
         <P>
-          Clone of famous E-Commerce shopping Platform 'Amazon' built using
-          Next.js, TailwindCSS. It fetches the product data from FakeStore API
-          (a free to use demo product REST API). The checkout process is handled
-          by Stripe through Next's serverless functions
+          Clone of famous E-Commerce shopping Platform &apos;Amazon&apos; built
+          using Next.js, TailwindCSS. It fetches the product data from FakeStore
+          API (a free to use demo product REST API). The checkout process is
+          handled by Stripe through Next&apos;s serverless functions
         </P>
         <List ml={4} my={4}>
           <ListItem>
