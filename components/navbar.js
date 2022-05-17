@@ -90,22 +90,6 @@ const Navbar = props => {
             <IoLogoGithub />
             Source
           </LinkItem>
-          <LinkItem
-            _target="_blank"
-            href={
-              data?.isPlaying
-                ? data.songUrl
-                : 'https://open.spotify.com/playlist/4bbRmyLN9Zbr4WllN5ucy8?si=878c062b4a074841'
-            }
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            {' '}
-            <BsSpotify /> -
-            {data?.isPlaying ? data.title : 'Spotify - Not Listening'}
-          </LinkItem>
         </Stack>
         <Box flex={1} align="right">
           <ToggleThemeButton />
@@ -129,18 +113,6 @@ const Navbar = props => {
                   href="https://github.com/dhruv-bvpdev/portfolio-v2"
                 >
                   View Source
-                </MenuItem>
-                <MenuItem
-                  as={Link}
-                  href={
-                    data?.isPlaying
-                      ? data.songUrl
-                      : 'https://open.spotify.com/playlist/4bbRmyLN9Zbr4WllN5ucy8?si=878c062b4a074841'
-                  }
-                >
-                  {data?.isPlaying
-                    ? `Spotify - ${data.title}`
-                    : 'Spotify - Not Listening'}
                 </MenuItem>
               </MenuList>
             </Menu>

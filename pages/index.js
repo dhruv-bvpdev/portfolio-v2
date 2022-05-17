@@ -17,8 +17,15 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
 import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5'
 import { FaTelegramPlane } from 'react-icons/fa'
+import { BsSpotify } from 'react-icons/bs'
+import useSWR from 'swr'
 
 const Page = () => {
+  const fetcher = url => fetch(url).then(r => r.json())
+  const { data } = useSWR('/api/spotify', fetcher)
+  const title = data?.isPlaying ? data.title : ''
+  const truncatedTitle = title.substr(0, 15) + '...'
+
   return (
     <Layout>
       <Container>
@@ -144,6 +151,26 @@ const Page = () => {
                   leftIcon={<FaTelegramPlane />}
                 >
                   @dhruv_G
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href={
+                  data?.isPlaying
+                    ? data.songUrl
+                    : 'https://open.spotify.com/playlist/4bbRmyLN9Zbr4WllN5ucy8?si=878c062b4a074841'
+                }
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<BsSpotify />}
+                >
+                  {data?.isPlaying
+                    ? `Now Playing - ${truncatedTitle}`
+                    : 'Spotify - Not Listening'}
                 </Button>
               </Link>
             </ListItem>
