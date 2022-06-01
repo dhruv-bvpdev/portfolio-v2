@@ -7,6 +7,7 @@ import thumbnailSlick from '../public/images/works/slicks_order.png'
 import thumbnailHyper from '../public/images/works/hyper_product.png'
 import thumbnailAmazon from '../public/images/works/amazon_orders.png'
 import thumbnailCovid from '../public/images/works/cov_home.png'
+import thumbnailMedium from '../public/images/works/medium_home.png'
 
 const Works = () => {
   return (
@@ -77,6 +78,18 @@ const Works = () => {
               React.js, CSS. The data is fetched from
               disease.sh(lmao.covid.ninja) API. The site has a world map and
               line graph to better understand data.
+            </WorkGridItem>
+          </Section>
+
+          <Section delay={0.3}>
+            <WorkGridItem
+              id="medium-clone"
+              title="Medium Clone"
+              thumbnail={thumbnailMedium}
+            >
+              Fully responsive clone of famous blog website &apos;Medium&apos;
+              built using Next.js, TailwindCSS, TypeScript and Sanity. It
+              fetches the data from Sanity CMS using GROQ Queries.
             </WorkGridItem>
           </Section>
         </SimpleGrid>
