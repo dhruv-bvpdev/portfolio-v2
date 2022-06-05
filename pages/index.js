@@ -25,6 +25,7 @@ const Page = () => {
   const { data } = useSWR('/api/spotify', fetcher)
   const title = data?.isPlaying ? data.title : ''
   const truncatedTitle = title.substr(0, 15) + '...'
+  const avatar = `/KL_avatar${useColorModeValue('', '_light')}.png`
 
   return (
     <Layout>
@@ -59,7 +60,7 @@ const Page = () => {
               maxWidth="100px"
               display="inline-block"
               borderRadius="full"
-              src="/profile.png"
+              src={avatar}
               alt="Profile Image"
             />
           </Box>
