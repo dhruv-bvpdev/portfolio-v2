@@ -28,6 +28,12 @@ const Work = ({ project }) => {
             <Meta>Stack</Meta>
             <span>{project.stack}</span>
           </ListItem>
+          <ListItem>
+            <Meta>Github Repo</Meta>
+            <Link href={project.github_link}>
+              {project.github_link} <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ListItem>
         </List>
 
         {project.gallery.map(projectImage => (
@@ -74,6 +80,7 @@ export const getStaticProps = async ({ params }) => {
     name,
     description,
     link,
+    github_link,
     year,
     stack,
     gallery,

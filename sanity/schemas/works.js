@@ -24,6 +24,11 @@ export default {
       type: 'string'
     },
     {
+      name: 'github_link',
+      title: 'Github Repo Link',
+      type: 'string'
+    },
+    {
       name: 'platforms',
       title: 'Platforms',
       type: 'array',
