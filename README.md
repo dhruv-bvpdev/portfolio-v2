@@ -3,10 +3,10 @@
 Second iteration of my portfolio  
 Built using Next.js, ChakraUI, Framer Motion, Three.js & Sanity CMS
 
-![Dark Theme Home Page](/screenshots/home.png?raw=true)
-![Works Page](/screenshots/works.png?raw=true)
-![Work Detail Page](/screenshots/work_detail.png?raw=true)
-![Light Theme Home Page](/screenshots/home_light.png?raw=true)
+![Dark Theme Home Page](/screenshots/home_new.png?raw=true)
+![Works Page](/screenshots/works_new.png?raw=true)
+![Work Detail Page](/screenshots/work_detail_new.png?raw=true)
+![Light Theme Home Page](/screenshots/home_light_new.png?raw=true)
 
 ### Features
 

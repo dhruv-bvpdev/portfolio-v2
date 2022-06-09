@@ -30,7 +30,11 @@ const Work = ({ project }) => {
           </ListItem>
           <ListItem>
             <Meta>Github Repo</Meta>
-            <Link href={project.github_link}>
+            <Link
+              href={project.github_link}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               {project.github_link} <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
