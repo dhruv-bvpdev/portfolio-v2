@@ -1,7 +1,7 @@
 # Portfolio-V2
 
 Second iteration of my portfolio  
-Built using Next.js, ChakraUI, Framer Motion, Three.js
+Built using Next.js, ChakraUI, Framer Motion, Three.js & Sanity CMS
 
 ![Dark Theme Home Page](/screenshots/home.png?raw=true)
 ![Works Page](/screenshots/works.png?raw=true)
@@ -26,6 +26,21 @@ For any bugs or errors in the project reach out to me on dhruv.gursahani@outlook
 
 - yarn install
 
+#### Install Dependencies (sanity)
+
+- cd sanity
+- yarn install
+
 #### Run (localhost:3000)
 
 - yarn dev
+
+#### Run Sanity (localhost:3333)
+
+- cd sanity
+- sanity start
+
+#### Sanity Deployment (localhost:3333)
+
+- cd sanity
+- sanity deploy
