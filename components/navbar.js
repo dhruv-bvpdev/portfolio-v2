@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Logo from './logo'
 import NextLink from 'next/link'
 import {
@@ -17,6 +18,7 @@ import {
 import ToggleThemeButton from './theme-toggle-button'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { IoLogoGithub } from 'react-icons/io'
+import { sanityClient } from '../sanity'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -39,6 +41,17 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
 
 const Navbar = props => {
   const { path } = props
+
+  const [resume, getResume] = useState('')
+
+  useEffect(() => {
+    const query = `
+    *[_type == "resume"] {
+      "resumePdf": resumePdf.asset->url 
+    }
+      `
+    sanityClient.fetch(query).then(data => getResume(data[0].resumePdf))
+  })
 
   return (
     <Box
@@ -74,6 +87,9 @@ const Navbar = props => {
           <LinkItem href="/works" path={path}>
             Works
           </LinkItem>
+          <LinkItem href={`${resume}?dl=CV-2022.pdf`} path={''}>
+            Resume
+          </LinkItem>
           <LinkItem
             _target="_blank"
             href="https://github.com/dhruv-bvpdev/portfolio-v2"
@@ -103,6 +119,9 @@ const Navbar = props => {
                 </NextLink>
                 <NextLink href="/works" passHref>
                   <MenuItem as={Link}>Works</MenuItem>
+                </NextLink>
+                <NextLink href={`${resume}?dl=CV-2022.pdf`} passHref>
+                  <MenuItem as={Link}>Resume</MenuItem>
                 </NextLink>
                 <MenuItem
                   as={Link}
